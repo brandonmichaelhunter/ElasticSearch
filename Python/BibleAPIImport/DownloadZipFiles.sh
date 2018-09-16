@@ -72,7 +72,7 @@ do
   # Download the zip file
   wget -P $ZIP_DIR_NAME $zipUrl 
   
-  # Execute a python zip to extract the bible data from the zip file and convert it to a JSON file.
+  # Execute a python script to extract the bible from the zip file and convert it into a JSON file.
   echo "Executing python script on $zipFullFileName to extract bible data into a json file."
   python3 sword_to_json.py --source_file "$ZIP_DIR_NAME/$zipFullFileName" --bible_version "$zipFileName" --output_file "$zipFileName.json"
   echo "Script completed"
